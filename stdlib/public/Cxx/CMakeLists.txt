@@ -140,6 +140,6 @@ add_swift_target_library(swiftstd ${SWIFT_STDLIB_LIBRARY_BUILD_TYPES} IS_SDK_OVE
     -Xfrontend -enable-experimental-cxx-interop
     -Xfrontend -module-interface-preserve-types-as-written
 
-    LINK_FLAGS "${SWIFT_RUNTIME_SWIFT_LINK_FLAGS}" -lc++
-    TARGET_SDKS ALL_APPLE_PLATFORMS # TODO: support other platforms as well
+    LINK_FLAGS "${SWIFT_RUNTIME_SWIFT_LINK_FLAGS}"
+    TARGET_SDKS ALL_APPLE_PLATFORMS LINUX # TODO: support other platforms as well
     INSTALL_IN_COMPONENT sdk-overlay)
